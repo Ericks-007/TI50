@@ -1,0 +1,41 @@
+p{
+    color: rgb(0, 255, 149); /*cor das letras*/
+
+    border-top-style: double; /*mudar o estilo do topo da borda*/
+    border-right-style: double;/*mudar o estilo a direita da borda*/
+    border-bottom-style: double;/*mudar o estilo embaixo da borda*/
+    border-left-style: double;/*mudar o estilo a esquerda da borda*/
+    border-style: dashed groove groove outset;/*mudar o estilo de tudo de forma simplificada*/
+
+     border-top-width: 5px;/*mudar a largura do topo da borda*/
+     border-right-width: 5px;/*mudar a largura a direita da borda*/
+     border-bottom-width: 5px;/*mudar a largura embaixo da borda*/
+     border-bottom-width: 5px;/*mudar a largura a esquerda da borda*/
+     border-width: 5px 10px 15px 30px;/*mudar as larguras de forma simplificada da borda*/
+
+     border-top-color: red;/*mudar a cor do topo da borda*/
+     border-right-color: red;/*mudar a cor da direita da borda*/
+     border-bottom-color: red;/*mudar a cor embaixo da borda*/
+     border-bottom-color: red;/*mudar a cor da esquerda da borda*/
+     border-color: rgb(72, 172, 77) black blue violet;/*mudar a cor de todas as bordas de forma simplificada*/
+}
+
+h1{
+    color: rgb(212, 24, 24); /*cor das letras*/
+    background-color: rgb(0, 0, 0); /*coloração do fundo*/
+
+    text-align: center; /*texto ao centro*/
+    border-radius: 15px; /*laterais arredondadas*/
+
+    height: 70px; /*altura*/
+    width: 250px; /*lagura*/
+
+    border-width: 5px; /*estilo da borda*/
+    border-color: rgb(221, 18, 18); /*cor da borda*/
+    border-style: solid; /*estilo da borda*/
+    border: dotted 10px aliceblue; /*união dos 3 acima*/
+
+    padding: 50px; /*espaçamento da letra ate a borda*/
+    margin: 0 auto; /*margem e do espaçamento pra fora da caixa, o auto e pra ficar centralizada*/
+
+}

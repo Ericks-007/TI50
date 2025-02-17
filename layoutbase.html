@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Base</title>
+    <style>
+        header{
+            background-color: rgb(184, 184, 236);
+            padding: 20px;
+        }
+        header h1{
+            text-align: center;
+            flex-grow: 1;
+            align-self: center;
+            color: brown;
+        }
+        h1{
+            text-align: center;
+            flex-grow: 1;
+        }
+        nav{
+            background-color: rgb(226, 211, 72);
+        }
+        .nav-link{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            display: block;
+        }
+        .nav-link:hover{
+            background-color: rgb(150, 154, 158);
+        }
+        main{
+            background-color: rgb(221, 221, 221);
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        main.img{
+            width: 400px;
+            height: 100px;
+            margin: 0 20px 20px 0;
+        }
+        aside{
+            background-color: rgb(204, 85, 85);
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        footer{
+            background-color: rgb(184, 173, 169); 
+            display: flex;
+        }
+        footer ul{
+            list-style: none;
+            flex-grow: 1;
+            text-align: center;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .navbar-nav{
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .nav-item{
+            flex-grow: 1;
+            text-align: center;
+        }
+        @media (min-width:576px){
+            .navbar-nav{
+                display: flex;
+            }
+            main{
+                width: 70%;
+            }
+            
+            aside{
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+     <header class="row">
+        <img src="imagens/papagaiov3.PNG" alt="logo do site">
+        <h1>Layout Base</h1>
+     </header>
+     <nav>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="#" class="nav-link">links</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">links</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">links</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">links</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">links</a></li>
+        </ul>
+     </nav>
+     <div class="row">
+       <main>
+        <h1>Conteudo Principal</h1>
+        <img src="imagens/www.jpg" alt="Caba do www">    
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus eum quam in accusamus aspernatur, voluptatum facere maiores sunt non dolor laborum quia amet praesentium laudantium dolorem nihil iure culpa debitis.</p>
+        <p>Maiores magnam debitis quibusdam provident in eos maxime fuga, vitae expedita eum ipsa ea et, cum libero esse corporis sed, aut accusantium nobis. Rerum, vero rem at maiores inventore voluptatum?</p>
+        <p>Incidunt natus harum maiores sequi cum itaque quas! Blanditiis iure veniam reiciendis dignissimos id recusandae sint iusto facilis explicabo aspernatur sunt saepe laborum corporis temporibus, delectus odit suscipit. Rem, suscipit.</p>
+        <p>Eligendi officiis voluptates saepe rem. Provident, autem unde possimus aperiam aliquam optio repellendus repudiandae, ea accusantium quisquam doloremque, libero corrupti reiciendis? Eum facilis ipsum enim ea inventore quam velit quia.</p>
+        <p>Consequatur nulla quidem sapiente, dolor eum provident quisquam harum repellendus incidunt consequuntur! Molestiae provident ad sint facilis accusantium architecto laboriosam impedit voluptate illo, maxime officiis soluta fuga, ea temporibus odio?</p>
+        <p>Error eos saepe, suscipit eius labore consequuntur enim accusamus obcaecati, illum vitae dolor quas maiores in voluptatem officia dolore veniam quidem commodi? Expedita quam eligendi voluptatibus facilis? Sunt, vel dolore.</p>
+       </main>
+       <aside>
+        <h1>Conteudo Secundaria</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nobis enim aut necessitatibus voluptatem explicabo nostrum, incidunt culpa tenetur dolore porro atque deserunt asperiores facilis reprehenderit alias voluptatibus, quia doloremque!</p>
+        <p>Aspernatur facere, quas exercitationem accusamus beatae unde perferendis quisquam molestias blanditiis, veritatis voluptas placeat? Minus quaerat aliquid nemo, incidunt accusantium obcaecati ea culpa nisi ratione fuga doloribus nulla dicta voluptate!</p>
+        <p>Beatae reprehenderit mollitia, libero excepturi maiores hic amet minima pariatur ea, in molestias quidem aspernatur cumque itaque tenetur architecto quod labore, nisi aperiam ut facilis quisquam tempora laboriosam odit? Facere?</p>
+       </aside>
+     </div>
+     <footer>
+        <ul>
+            <li>blablabla</li>
+            <li>blablabla</li>
+            <li>blablabla</li>
+        </ul>
+        <ul>
+            <li>arigato</li>
+            <li>arigato</li>
+            <li>arigato</li>
+        </ul>
+        <ul>
+            <li>masqueeeeico</li>
+            <li>masqueeeeico</li>
+            <li>masqueeeeico</li>
+        </ul>
+     </footer>
+</body>
+</html>
