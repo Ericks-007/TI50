@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exeplos de JavaScript</title>
+
+        <style>
+        </style>
+    </head>
+
+    <body id="dark">
+            <h1>Modificando Conteudo</h1>
+            <p id="mensagem">Olá Mundo</p>
+            <button onclick='document.getElementById("mensagem").innerText = "Olá JavaScript!";'>Mudar Mensagem</button>
+            <button onclick='document.getElementById("mensagem").innerText = "Olá Mundo";'>Voltar Mensagem</button>
+
+            <h1>Modificando Atributos</h1>
+            <img id="robocop" src="imagens/começo.jpg" alt="Lâmpada">
+            <button onclick="document.getElementById('robocop').src='imagens/começo.jpg';">começo</button>
+            <button onclick="document.getElementById('robocop').src='imagens/final.jpg';">final</button>
+
+            <h1>Modificando Formatação</h1>
+            <p id="mensagem2">COMO DIMINUIR A FONTE????</p>
+            <button onclick="document.getElementById('mensagem2').style.fontSize = '300px';">Aumentar</button>
+            <button onclick="document.getElementById('mensagem2').style.fontSize = '16px';">Diminuir</button>
+
+            <h1>Tema escuro</h1>
+            <!-- <button onclick="document.getElementById('dark').style.backgroundColor = '#212529'; document.getElementById('dark').style.color = 'white';">Tema escuro</button> -->
+            <button onclick="TemaEscuro()">Tema Escuro</button>
+            <button onclick="TemaClaro()">Tema Claro</button>
+            
+        <Script>
+            function TemaEscuro(){
+                document.getElementById('dark').style.backgroundColor = '#212529';
+                document.getElementById('dark').style.color = 'white';
+            }
+            function TemaClaro(){
+                document.getElementById('dark').style.backgroundColor = 'white';
+                document.getElementById('dark').style.color = 'black';
+            }
+        </Script>
+    </body>
+
+</html>

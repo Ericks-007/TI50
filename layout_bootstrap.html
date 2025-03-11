@@ -6,18 +6,54 @@
     <meta name="viewport" content="width=], initial-scale=1.0">
     <title>Layout com Bootstrap</title>
 
+    <!-- lnkar o bootstrap -->
     <!---<link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.css"> --->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- link da fontes html -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hanunoo&display=swap" rel="stylesheet"> -->
 
     <style>
-        :root {
-            --bs-primary-rgb: 117, 18, 97;
+        /* link da fonte css */
+        @import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+
+        @font-face {
+            font-family: Jester;
+            src: url(Fontes/Jester.ttf);
         }
 
+        :root {
+            --bs-primary-rgb: 117, 18, 97;
+
+            --bs-body-font-family: Jester;
+            --bs-body-font-size: 1.3rem;
+        }
+
+        nav{
+            font-family: Domine;
+        }
+        header h1{
+            font-family: Sigmar;
+        }
+        footer p{
+            font-family: Sigmar;
+        }
+        footer i{
+            color: rgb(218, 221, 27);
+        }
         .bk {
-            /* background-image: url(imagens/batmanv2.jpg); */
+            background-image: url(imagens/batmanv2.jpg);
+        }
+        .nav-link{
+            color: rgb(218, 221, 27) !important;
+        }
+        .nav-link:hover{
+            color: rgb(133, 16, 104) !important;
         }
     </style>
 </head>
@@ -27,27 +63,27 @@
     <Header class="p-3 text-bg-primary text-center">
         <h1>Layout Base Com Bootstrap</h1>
     </Header>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark text-center">
         <div class="container-fluid">
-            <ul class="navbar-nav">
-                <li class="nav-item">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item flex-grow-1">
+                    <a href="#" class="nav-link flex-grow-1">Link</a>
+                </li>
+                <li class="nav-item flex-grow-1">
                     <a href="#" class="nav-link">Link</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item flex-grow-1">
                     <a href="#" class="nav-link">Link</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Link</a>
-                </li>
-                <li class="nav-item">
+                <li class="nav-item flex-grow-1">
                     <a href="#" class="nav-link">Link</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <div class="container-fluid mt-5">
+    <div class="container-fluid mt-5 text-bg-dark">
         <div class="row">
-            <main class="col-sm-8">
+            <main class="col-sm-8 tex">
                 <article>
                     <h1>Conteudo Principal</h1>
                     <section>
@@ -85,4 +121,5 @@
         <a href="https://github.com/Ericks-007" target="_blank"><i class="bi bi-github"></i></a>
     </footer>
 </body>
+
 </html>

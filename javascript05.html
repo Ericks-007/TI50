@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de JavaScript</title>
+</head>
+<body>
+    <h1>Estruruas while</h1>
+    <button onclick="pagar()">Clique aqui</button>
+
+    <script>
+        function pagar(){
+        let resposta = prompt("Você deve dinero. Vai pagar? S/N");
+        while (resposta != "S"){
+
+        while (resposta != "S" && resposta !="N"){
+            resposta = prompt("Responda SOMENTE com S ou N.");
+        }
+        }
+        alert("Obrigado por pagar");
+        }
+    </script>
+
+</body>
+</html>

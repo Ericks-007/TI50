@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+</head>
+<body>
+    <h1>Entrada via prompt</h1>
+    <button onclick="mensagem()">Clique aqui</button>
+
+    <script>
+        function mensagem() {
+            let nome = prompt("Digite seu nome: ");
+            alert("Olá, " + nome + "!");
+        }
+    </script>
+
+    <h1>Entrada via formulário</h1>
+    <form onsubmit="mensagem2();return false">
+        <input type="text" id="nome" placeholder="Digite seu nome">
+        <input type="submit" >
+    </form>
+    <p id="msg"></p>
+
+    <script>
+        function mensagem2() {
+            let nome = document.getElementById("nome").value;
+            document.getElementById("msg").innerText = "Olá, " + nome + "!";
+        }
+        
+    </script>
+
+    <h1>Cálculos</h1>
+    <form>
+        <input type="number" id="num1" placeholder="Digite um número">
+        <input type="number" id="num2" placeholder="Digite outro número">
+        <input type="submit" value="+" onclick="calcular('+');return false">
+        <input type="submit" value="-" onclick="calcular('-');return false">
+        <input type="submit" value="*" onclick="calcular('*');return false">
+        <input type="submit" value="/" onclick="calcular('/');return false">
+    </form>
+    <p id="resultado"></p>
+
+    <script>
+        function calcular(sinal) {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+            let resultado = eval(num1+sinal+num2);
+            document.getElementById("resultado").innerText = "Resultado: " + resultado;
+        }
+
+        
+
+        
+    </script>
+    
+</body>
+</html>
