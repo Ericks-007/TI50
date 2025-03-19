@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários Html</title>
+</head>
+
+<body>
+    <h1>Formulários</h1>
+    <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post">
+        <fieldset>
+            <legend>Formulário de Cadastro</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" name="Nome" id="nome" required>
+            <br>
+            <label for="senha">Senha:</label>
+            <input type="password" name="Senha" id="senha" required>
+
+        </fieldset>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label for="email">Email:</label>
+            <input type="email" name="Email" id="email" required>
+            <br>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" name="Telefone" id="telefone" required>
+            <br>
+            <label for="data">Data de Nascimento:</label>
+            <input type="date" name="Data" id="data" required>
+            <br>
+            <input type="radio" id="aluno" name="sel" value="Aluno"><label for="aluno">Aluno</label>
+            <input type="radio" id="professor" name="sel" value="Professor"><label for="professor">Professor</label>
+            <input type="radio" id="funcionario" name="sel" value="Funcionário"><label for="funcionario">Funcionário</label>
+            <br>
+            <input type="checkbox" name="politica" id="politica" required>
+            <label for="politica">Aceito a política de privacidade</label>
+            <br>
+            <input type="checkbox" name="informe" id="informe" checked>
+            <label for="informe">Quero receber informações</label>
+            <br>
+
+            <label for="estado">Estado:</label>
+            <select name="Estado" id="estado">
+                <option value=""></option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+            <br>
+            <label for="foto">Foto:</label>
+            <input type="file" name="Foto" id="foto" accept="image/*">
+            <br>
+            <label for="comentario">Comentário:</label>
+            <textarea name="Comentario" id="comentario" cols="30" rows="10"></textarea>
+
+        </fieldset>
+        <input type="reset" value="Limpar Formulário">
+        <input type="submit" value="Enviar Formulário">
+    </form>
+</body>
+
+</html>

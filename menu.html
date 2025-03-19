@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Test</title>
+    <style>
+        nav{
+            background: #232530;
+            height: 50px;
+            position: relative;
+        }
+        .ham-menu{
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            right: 0;
+        }
+        .ham-menu span{
+            height: 5px;
+            width: 70%;
+            background-color: rgb(105, 23, 176);
+            border-radius: 25px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: .3s ease;
+        }
+        .ham-menu span:nth-child(1){
+            top: 25%;
+        }
+        .ham-menu span:nth-child(3){
+            top: 75%;
+        }
+        .ham-menu.active span:nth-child(3){
+            top: 50%;
+            transform: 
+                translate(-50%, -50%)
+                rotate(-45deg);
+        }
+        .ham-menu.active span:nth-child(2){
+            opacity: 0;
+        }
+        .ham-menu.active span:nth-child(1){
+            top: 50%;
+            transform: 
+                translate(-50%, -50%)
+                rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <script>
+        const hamMenu = document.querySelector('.ham-menu');
+    hamMenu.addEventListener('click', () => {
+    hamMenu.classList.toggle('active');
+});
+    </script>
+</body>
+</html>

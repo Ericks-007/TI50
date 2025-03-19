@@ -12,11 +12,13 @@
     <script>
         function pagar(){
         let resposta = prompt("Você deve dinero. Vai pagar? S/N");
-        while (resposta != "S"){
+        while (resposta != "S" && resposta != "s"){
 
-        while (resposta != "S" && resposta !="N"){
+        while (resposta != "S" && resposta != "N" && resposta != "s" && resposta != "n"){
             resposta = prompt("Responda SOMENTE com S ou N.");
         }
+            resposta = prompt("Pague SIM SUA DIVIDA.");
+
         }
         alert("Obrigado por pagar");
         }

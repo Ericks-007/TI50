@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de formulário com JavaScript</title>
+
+    <style>
+        #mensagem, #mensagem2{
+            display: none;
+        }
+        .invalido {
+            color: red;
+        }
+        .valido{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://jkorpela.fi/cgi-bin/echo.cgi">
+        <input type="text" name="senha" id="senha" placeholder="Digite sua senha" onkeyup="valida()">
+        <input type="text" id="confirmar" placeholder="Confirme sua senha" onkeyup="confirma()">
+        
+        <div id="mensagem">
+            <p id="minuscula">A senha deve conter pelo menos uma letra miníscula</p>
+            <p id="maiuscula">A senha deve conter pelo menos uma letra maiuscula</p>
+            <p id="numero">A senha deve conter pelo menos um número</p>
+            <p id="especial">A senha deve conter pelo menos um caractere especial</p>
+            <p id="minimo">A senha deve conter pelo menos 8 caracteres</p>
+        </div>
+        <div id="mensagem2">
+            <p id="confirmacao">As senhas devem ser iguais</p>
+        </div>
+        <input id="enviar" type="submit" disabled>
+    </form>
+
+    <script>
+        function valida(){
+
+            document.getElementById('mensagem').style.display = 'block';    
+
+            let senha = document.getElementById('senha').value;
+            let minuscula = document.getElementById('minuscula');
+            let maiuscula = document.getElementById('maiuscula');
+            let numero = document.getElementById('numero');
+            let especial = document.getElementById('especial');
+            let minimo = document.getElementById('minimo');
+            
+            if(senha.match(/[a-z]/)){
+                minuscula.classList.remove('invalido');
+                minuscula.classList.add('valido');
+            }else{
+                minuscula.classList.remove('valido');
+                minuscula.classList.add('invalido');
+            }
+
+            if(senha.match(/[A-Z]/)){
+                maiuscula.classList.remove('invalido');
+                maiuscula.classList.add('valido');
+            }else{
+                maiuscula.classList.remove('valido');
+                maiuscula.classList.add('invalido');
+            }
+            
+            if(senha.match(/[0-9]/)){
+                numero.classList.remove('invalido');
+                numero.classList.add('valido');
+            }else{
+                numero.classList.remove('valido');
+                numero.classList.add('invalido');
+            }   
+
+            if(senha.match(/[\W_]/)){
+                especial.classList.remove('invalido');
+                especial.classList.add('valido');
+            }else{
+                especial.classList.remove('valido');
+                especial.classList.add('invalido');
+            }
+
+            if(senha.match(/.{8,}/)){
+                minimo.classList.remove('invalido');
+                minimo.classList.add('valido'); 
+            }else{
+                minimo.classList.remove('valido');
+                minimo.classList.add('invalido');
+            }
+        }
+
+        function confirma(){
+
+            document.getElementById('mensagem2').style.display = 'block'; 
+
+            let senha = document.getElementById('senha').value;
+            let confirmar = document.getElementById('confirmar').value;
+            let minuscula = document.getElementById('minuscula');
+            let maiuscula = document.getElementById('maiuscula');
+            let numero = document.getElementById('numero');
+            let especial = document.getElementById('especial');
+            let minimo = document.getElementById('minimo');
+            let confirmacao = document.getElementById('confirmacao');
+
+            if(senha === confirmar){
+                confirmacao.classList.remove('invalido');
+                confirmacao.classList.add('valido');
+            }else{
+                confirmacao.classList.remove('valido');
+                confirmacao.classList.add('invalido');
+            }
+            
+            if(senha.match(/[a-z]/) && senha.match(/[A-Z]/) && senha.match(/[0-9]/) && senha.match(/[\W_]/) && senha.match(/.{8,}/)&&senha === confirmar){
+                document.getElementById('enviar').disabled = false;
+            }else{
+                document.getElementById('enviar').disabled = true;
+            }
+        }
+    </script>
+    
+</body>
+</html>

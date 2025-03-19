@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis do Java Script</title>
+</head>
+<body>
+    <h1>Escopo de variáveis</h1>
+    <script>
+        let nome="Paulo;" //variável com escopo global
+        var idade= 49; //variável com escopo global - forma antiga
+        const pi=3.1415; //constante com escopo global
+
+        function exibir(){
+            let nome="Maria"; //variável com escopo local
+            alert("Nome: "+nome);
+        }
+
+        if(3>2){
+            let nome="João";
+        }
+
+        console.log(nome);
+
+    </script>
+
+    <h1>Variável do tipo vetor ou array</h1>
+
+    <ul id="lista"></ul>
+
+    <script>
+        const frutas=["maçã", "banana", "laranja", "uva", "melancia"];
+        console.log(frutas);
+        console.log(typeof frutas);
+        console.log(frutas[0]);
+        console.log(frutas[4]);
+        console.log(frutas[5]);
+
+        frutas[5]="morango";
+        console.log(frutas);
+
+        frutas[1]="abacaxi";
+        console.log(frutas);
+
+        console.log(frutas.length);
+
+        for(let i=0; i<frutas.length; i++){
+            document.getElementById("lista").innerHTML+="<li>"+frutas[i]+"</li>";
+        }
+
+    </script>
+
+</body>
+</html>

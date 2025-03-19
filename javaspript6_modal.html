@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa Modal</title>
+
+    <style>
+        .modal{
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-conteudo{
+            background-color: #fefefe;
+            width: 80%;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+        }
+
+        .fechar{
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .fechar:hover{
+            color: black;
+            cursor: pointer;
+        }   
+    </style>
+</head>
+<body>
+    <button id="btnAbrir">Abrir</button>
+    <div class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h1>Caixa Modal</h1>
+            <p>Este é um exemplo de caixa modal</p>
+        </div>
+    </div>
+
+    <script>
+        let btnAbrir = document.getElementById("btnAbrir");
+        let modal = document.getElementsByClassName("modal")[0];
+        let fechar = document.getElementsByClassName("fechar")[0];
+
+        function abrir(){
+            modal.style.display = "block";
+        }
+
+        fechar.onclick = function(){
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event){
+            if(event.target == modal){
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    
+
+</body>
+</html>
