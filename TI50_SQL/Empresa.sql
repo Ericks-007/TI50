@@ -23,11 +23,13 @@ GO
 
 select * from Funcionarios;
 
+drop table Filhos;
+
 create table Filhos(
 	idFilhos int primary key identity(1,1),
 	nomeFilho varchar(100) not null,
 	nascFilho date not null,
-	idFunc int foreign key references Funcionarios(idFunc) not null 
+	idFunc int foreign key references Funcionarios(idFunc)
 );
 
  insert into Filhos (nomeFilho,nascFilho,idFunc)
@@ -38,8 +40,11 @@ create table Filhos(
 						('Saonam','2009-08-26',3),
 						('Polimento','2017-06-01',3),
 						('Mia Pomba','2018-04-10',4),
-						('Mia Chibata','2018-04-10',4);
+						('Mia Chibata','2018-04-10',4),
+						('Amapai','2018-04-10',null),
+						('Odette','2018-04-10',null);
 
+select * from Filhos;
 -- nao sera inserido pois nao tem um funcionario valido
 insert into Filhos (nomeFilho,nascFilho,idFunc)
 						values
